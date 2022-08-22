@@ -1,41 +1,18 @@
 import { gql } from 'apollo-server';
+import { userResolvers } from './user/resolvers';
+import { userTypeDefs } from './user/typedefs';
 
 const rootTypeDefs = gql`
   type Query {
-    hi: String
-    # user: User
-    # users: [User!]!
+    _empty: Boolean
   }
 `;
 
 const rootResolvers = {
   Query: {
-    hi: () => 'hi again',
-    //     user: () => {
-    //       return {
-    //         id: '1',
-    //         username: 'johndoe',
-    //       };
-    //     },
-    //     users: () => {
-    //       return [
-    //         {
-    //           id: '1',
-    //           username: 'johndoe',
-    //         },
-    //         {
-    //           id: '2',
-    //           username: 'johndoe2',
-    //         },
-    //         {
-    //           id: '3',
-    //           username: 'johndoe3',
-    //         },
-    //       ];
-    //     },
-  }
-}
+    _empty: () => true,
+  },
+};
 
-export const typeDefs = [rootTypeDefs];
-export const resolvers = [rootResolvers];
-
+export const typeDefs = [rootTypeDefs, userTypeDefs];
+export const resolvers = [rootResolvers, userResolvers];
