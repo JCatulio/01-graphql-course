@@ -11,8 +11,5 @@ const users = async (_, { input }, { getUsers }) => {
 };
 
 export const userResolvers = {
-  Query: {
-    user,
-    users,
-  },
+  Query: { user, users },
 };
