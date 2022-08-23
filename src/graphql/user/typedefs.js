@@ -1,9 +1,9 @@
-import { gql } from 'apollo-server-core';
+import { gql } from 'apollo-server';
 
 export const userTypeDefs = gql`
   extend type Query {
     user(id: ID!, teste: Boolean): User!
-    users: [User!]!
+    users(input: ApiFiltersInput): [User!]!
   }
 
   type User {
