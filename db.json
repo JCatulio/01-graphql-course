@@ -355,12 +355,12 @@
       "createdAt": "2017-04-26T19:39:05.420Z"
     },
     {
-      "title": "UPDATED - O título",
-      "body": "UPDATED - O conteúdo",
-      "userId": "903",
+      "title": "O título",
+      "body": "O conteúdo",
+      "userId": "592",
       "indexRef": 25,
-      "createdAt": "2022-08-24T19:36:13.116Z",
-      "id": "Yg3n87Q"
+      "createdAt": "2022-08-24T21:53:47.305Z",
+      "id": "yNsRC-g"
     }
   ],
   "comments": [
