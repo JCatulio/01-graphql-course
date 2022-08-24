@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import fetch from 'node-fetch';
 
 const API_URL = process.env.API_URL;
