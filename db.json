@@ -177,6 +177,15 @@
       "indexRef": 22,
       "createdAt": "2022-08-25T16:32:31.203Z",
       "id": "mEAZY5C"
+    },
+    {
+      "firstName": "Joana",
+      "lastName": "O.",
+      "userName": "joana",
+      "passwordHash": "$2b$12$sNBRJZDiCw2cAFa98xAMsOYRjCbUKzSDEkA1Z4IwwlrsU/.B9LIn2",
+      "indexRef": 23,
+      "createdAt": "2022-08-25T17:46:10.549Z",
+      "id": "TVq3OF7"
     }
   ],
   "posts": [
