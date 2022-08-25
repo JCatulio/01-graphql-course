@@ -1,4 +1,4 @@
-import { checkOwner } from './utils/auth-functions';
+import { checkOwner } from '../login/utils/login-functions';
 
 // Query resolvers
 const user = async (_, { id }, { dataSources }) => {
