@@ -176,7 +176,8 @@
       "passwordHash": "$2b$12$s8oQvEmiZFZZwNvqXorrH.SICt5WFTLZCF./TUD28RUkn29FA6fra",
       "indexRef": 22,
       "createdAt": "2022-08-25T16:32:31.203Z",
-      "id": "mEAZY5C"
+      "id": "mEAZY5C",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtRUFaWTVDIiwiaWF0IjoxNjYxNDYwMDIyLCJleHAiOjE2NjIwNjQ4MjJ9.5Qu-8aEn6VvZ3Up0ESpuPKL45n2kdNHARh1taSRvQ_Q"
     },
     {
       "firstName": "Joana",
@@ -186,6 +187,16 @@
       "indexRef": 23,
       "createdAt": "2022-08-25T17:46:10.549Z",
       "id": "TVq3OF7"
+    },
+    {
+      "firstName": "Pedro",
+      "lastName": "O.",
+      "userName": "pedro",
+      "passwordHash": "$2b$12$MVd95U25Pq3SXtiSe92jGuCuBJY5WSQI.54cD9QYYW506YDI9kkka",
+      "indexRef": 24,
+      "createdAt": "2022-08-25T21:09:54.851Z",
+      "id": "D2uDVF5",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJEMnVEVkY1IiwiaWF0IjoxNjYxNDYxODAxLCJleHAiOjE2NjIwNjY2MDF9.doWag3AHVxdeKjk9L2hGzVxnYXpjiGhekZVEdKJuVqE"
     }
   ],
   "posts": [
