@@ -186,7 +186,8 @@
       "passwordHash": "$2b$12$sNBRJZDiCw2cAFa98xAMsOYRjCbUKzSDEkA1Z4IwwlrsU/.B9LIn2",
       "indexRef": 23,
       "createdAt": "2022-08-25T17:46:10.549Z",
-      "id": "TVq3OF7"
+      "id": "TVq3OF7",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJUVnEzT0Y3IiwiaWF0IjoxNjYxNTI0NDc4LCJleHAiOjE2NjIxMjkyNzh9.g7CiEEsoKYmrhF1djtZWx0lfkc1pqwxHPXZczFKB0a0"
     },
     {
       "firstName": "Pedro",

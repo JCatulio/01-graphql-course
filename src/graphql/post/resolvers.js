@@ -9,7 +9,7 @@ const post = async (_, { id }, { dataSources }) => {
 
 const posts = async (_, { input }, { dataSources, loggedUserId }) => {
   if (!loggedUserId) {
-    throw new AuthenticationError('You must log in.')
+    throw new AuthenticationError('You must log in.');
   }
   const posts = dataSources.postApi.getPosts(input);
   return posts;
@@ -22,7 +22,12 @@ const createPost = async (_, { data }, { dataSources, loggedUserId }) => {
   return dataSources.postApi.createPost(data);
 };
 
-const updatePost = async (_, { postId, data }, { dataSources }) => {
+const updatePost = async (
+  _,
+  { postId, data },
+  { dataSources, loggedUserId },
+) => {
+  checkIsLoggedIn(loggedUserId);
   return dataSources.postApi.updatePost(postId, data);
 };
 
