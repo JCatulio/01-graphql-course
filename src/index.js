@@ -1,4 +1,8 @@
 import { ApolloServer } from 'apollo-server';
+import {
+  ApolloServerPluginLandingPageGraphQLPlayground,
+  ApolloServerPluginLandingPageProductionDefault,
+} from 'apollo-server-core';
 import { resolvers, typeDefs } from './graphql/schema';
 import { context } from './graphql/context';
 import { PostsApi } from './graphql/post/datasources';
@@ -9,6 +13,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   context,
+  csrfPrevention: true,
   dataSources: () => {
     return {
       postApi: new PostsApi(),
@@ -16,6 +21,15 @@ const server = new ApolloServer({
       loginApi: new LoginApi(),
     };
   },
+  plugins: [
+    // Install a landing page plugin based on NODE_ENV
+    process.env.NODE_ENV === 'production'
+      ? ApolloServerPluginLandingPageProductionDefault({
+          graphRef: 'my-graph-id@my-graph-variant',
+          footer: false,
+        })
+      : ApolloServerPluginLandingPageGraphQLPlayground({ footer: false }),
+  ],
   uploads: false,
   cors: {
     origin: ['https://cdpn.io'],
