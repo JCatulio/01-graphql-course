@@ -16,15 +16,16 @@ const authorizeUser = async (req) => {
     if (foundUser.token !== token) return '';
     return userId;
   } catch (e) {
-    console.log(e);
+    // console.log(e);
     return '';
   }
 };
 
-export const context = async ({ req }) => {
+export const context = async ({ req, res }) => {
   const loggedUserId = await authorizeUser(req);
 
   return {
     loggedUserId,
+    res,
   };
 };
