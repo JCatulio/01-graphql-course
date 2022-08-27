@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server-core';
 
-export const commentTypeDefs = gql`
+export const commentTypedefs = gql`
   extend type Mutation {
     createComment(data: CreateCommentInput!): Comment!
   }

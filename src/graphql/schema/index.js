@@ -4,7 +4,7 @@ import { apiFiltersResolvers } from './api-filters/resolvers';
 import { apiFiltersTypeDefs } from './api-filters/typedefs';
 
 import { commentResolvers } from './comment/resolvers';
-import { commentTypeDefs } from './comment/typedefs';
+import { commentTypedefs } from './comment/typedefs';
 
 import { loginResolvers } from './login/resolvers';
 import { loginTypedefs } from './login/typesdefs';
@@ -41,7 +41,7 @@ export const typeDefs = [
   postTypeDefs,
   apiFiltersTypeDefs,
   loginTypedefs,
-  commentTypeDefs
+  commentTypedefs,
 ];
 export const resolvers = [
   rootResolvers,
@@ -49,5 +49,5 @@ export const resolvers = [
   postResolvers,
   apiFiltersResolvers,
   loginResolvers,
-  commentResolvers
+  commentResolvers,
 ];
