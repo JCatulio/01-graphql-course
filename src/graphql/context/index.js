@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { UsersApi } from './user/datasources';
+import { UsersApi } from '../schema/user/datasources';
 
 const verifyJwtToken = async (token) => {
   try {
@@ -12,6 +12,7 @@ const verifyJwtToken = async (token) => {
     if (foundUser.token !== token) return '';
     return userId;
   } catch (e) {
+    // console.log(e);
     return '';
   }
 };
@@ -56,7 +57,7 @@ export const context = async ({ req, res }) => {
   console.log(req.headers.cookie);
 
   if (!loggedUserId) {
-    if (req.header.cookie) {
+    if (req.headers.cookie) {
       const { jwtToken } = cookieParser(req.headers.cookie);
       loggedUserId = await verifyJwtToken(jwtToken);
     }

@@ -177,7 +177,7 @@
       "indexRef": 22,
       "createdAt": "2022-08-25T16:32:31.203Z",
       "id": "mEAZY5C",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtRUFaWTVDIiwiaWF0IjoxNjYxNTIzMTc3LCJleHAiOjE2NjIxMjc5Nzd9.b3gfmBb2V9nAg1QCNFe24GFAeLaTVMHrzrXF8bzK96k"
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJtRUFaWTVDIiwiaWF0IjoxNjYxNTU3ODAwLCJleHAiOjE2NjIxNjI2MDB9.-eWC9Dx7q7flsFSm46tG6VRqevntep8yYtWutQrQvxE"
     },
     {
       "firstName": "Joana",
@@ -392,6 +392,14 @@
       "userId": "502",
       "indexRef": 19,
       "createdAt": "2017-04-26T19:39:05.420Z"
+    },
+    {
+      "title": "3333 Meu post logado!!!",
+      "body": "33 Agora temos sistema de login",
+      "userId": "mEAZY5C",
+      "indexRef": 25,
+      "createdAt": "2022-08-27T00:07:09.214Z",
+      "id": "zrQfhhN"
     }
   ],
   "comments": [

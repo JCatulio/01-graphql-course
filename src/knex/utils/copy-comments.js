@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { knex } from '../index';
 import { comments } from '../../../db.json';
 import { dateISOtoMySQL } from './date-iso-to-mysql';

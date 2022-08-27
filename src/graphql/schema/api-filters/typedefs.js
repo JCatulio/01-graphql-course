@@ -9,7 +9,7 @@ export const apiFiltersTypeDefs = gql`
   }
 
   enum ApiFilterOrder {
-    ASC,
+    ASC
     DESC
   }
 `;

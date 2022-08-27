@@ -1,18 +1,14 @@
 import { checkOwner } from '../login/utils/login-functions';
 
 // Query resolvers
-const user = async (_, { id }, { dataSources }) => {
-  const user = await dataSources.userApi.getUser(id);
-  return user;
-};
-
 const users = async (_, { input }, { dataSources }) => {
   const users = await dataSources.userApi.getUsers(input);
   return users;
 };
 
-const posts = ({ id }, _, { dataSources }) => {
-  return dataSources.postApi.batchLoadByUserId(id);
+const user = async (_, { id }, { dataSources }) => {
+  const user = await dataSources.userApi.getUser(id);
+  return user;
 };
 
 // Mutation Resolvers
@@ -35,6 +31,10 @@ const deleteUser = async (_, { userId }, { dataSources, loggedUserId }) => {
 };
 
 // Field Resolvers
+const posts = ({ id }, _, { dataSources }) => {
+  return dataSources.postApi.batchLoadByUserId(id);
+};
+
 export const userResolvers = {
   Query: { user, users },
   Mutation: { createUser, updateUser, deleteUser },

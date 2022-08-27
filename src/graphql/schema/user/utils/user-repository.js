@@ -1,5 +1,5 @@
-import { ValidationError, UserInputError } from 'apollo-server-errors';
 import bcrypt from 'bcrypt';
+import { UserInputError, ValidationError } from 'apollo-server-errors';
 
 export const createUserFn = async (userData, dataSource) => {
   await checkUserFields(userData, true);
@@ -67,13 +67,13 @@ const validateUserName = (userName) => {
 };
 
 const validateUserPassword = (password) => {
-  // Letra minúscula, maiúscula e número
+  // Letra minúscula, letra maiúscula e número
   const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,30}$/;
 
   if (!password.match(strongPasswordRegex)) {
     throw new UserInputError(
       'Password must contain at least: ' +
-        'One lowercase letter, one uppercase letter and one number.',
+        'One lower case letter, one upper case letter and one number.',
     );
   }
 };
