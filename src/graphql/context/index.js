@@ -60,7 +60,7 @@ export const context = async ({ req, res, connection }) => {
   if (!loggedUserId) {
     if (
       reqOrConnection &&
-      reqOrConnection.header &&
+      reqOrConnection.headers &&
       reqOrConnection.headers.cookie
     ) {
       const { jwtToken } = cookieParser(reqOrConnection.headers.cookie);
