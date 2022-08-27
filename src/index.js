@@ -3,11 +3,18 @@ import {
   ApolloServerPluginLandingPageGraphQLPlayground,
   ApolloServerPluginLandingPageProductionDefault,
 } from 'apollo-server-core';
-import { resolvers, typeDefs } from './graphql/schema';
+
+import { knex } from './knex/';
+
 import { context } from './graphql/context';
+
 import { PostsApi } from './graphql/schema/post/datasources';
 import { UsersApi } from './graphql/schema/user/datasources';
+
 import { LoginApi } from './graphql/schema/login/datasources';
+import { resolvers, typeDefs } from './graphql/schema';
+
+import { CommentSQLDataSource } from './graphql/schema/comment/datasources';
 
 const server = new ApolloServer({
   typeDefs,
@@ -19,6 +26,7 @@ const server = new ApolloServer({
       postApi: new PostsApi(),
       userApi: new UsersApi(),
       loginApi: new LoginApi(),
+      commentDb: new CommentSQLDataSource(knex),
     };
   },
   plugins: [
